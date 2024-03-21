@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-header>
+        <button mat-button >Life me</button>
+        <img mat-card-avatar class="avatar" src="../../../../assets/unnamed.jpg" [matMenuTriggerFor]="submenu">
+        <mat-menu #submenu="matMenu">
+            <!-- Add your submenu items here -->
+            <button mat-menu-item>
+                <mat-icon>sub_menu_icon</mat-icon>
+                <span>Submenu Item 1</span>
+            </button>
+            <button mat-menu-item>
+                <mat-icon>sub_menu_icon</mat-icon>
+                <span>Submenu Item 2</span>
+            </button>
+        </mat-menu>
+    </mat-card-header>
+</mat-card>
