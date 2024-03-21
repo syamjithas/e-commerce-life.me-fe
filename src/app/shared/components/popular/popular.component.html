@@ -1,1 +1,29 @@
-<p>popular works!</p>
+<div>
+    <div>
+        <div>
+            popular
+        </div>
+        <button> Best Seller</button>
+        <button> Categories</button>
+        <div>View All</div>
+    </div>
+    <div>
+        <div>
+            <div *ngFor="let product of products" class="product-card">
+                <div class="product-card-header">
+                    <div class="product-card-icons">
+                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-share"></i>
+                    </div>
+                </div>
+                <div class="product-card-body">
+                    <img src="{{ product.image }}" alt="Product Image">
+                    <h3 class="product-card-name">{{ product.name }}</h3>
+                    <div class="product-card-price">
+                        <span class="original-price">{{ product.price }}</span>
+                        <span class="discount">{{ product.discount }}</span>
+                    </div>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>

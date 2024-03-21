@@ -1,1 +1,13 @@
-<p>top-categories works!</p>
+<div>
+    <div>
+        Top Categories
+    </div>
+    <div>
+        View All
+    </div>
+
+</div>
+
+<div *ngFor="let category of categories">
+    <a [routerLink]="['/products', category.id]">{{category.name}}</a>
+</div>
