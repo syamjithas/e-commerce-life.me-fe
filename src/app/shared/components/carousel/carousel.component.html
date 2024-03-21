@@ -1,1 +1,6 @@
-<p>carousel works!</p>
+<p-carousel [value]="products" [numVisible]="1" [numScroll]="3" [circular]="true" [responsiveOptions]="">
+    <ng-template let-product pTemplate="item">
+        <h4 class="mb-1">{{ product.name }}</h4>
+        <h6 class="mt-0 mb-3">{{ '$' + product.price }}</h6>
+    </ng-template>
+</p-carousel>
