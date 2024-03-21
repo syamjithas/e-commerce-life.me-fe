@@ -1,5 +1,30 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+
+.logo {
+    height: 70px;
+    margin-left: 100px;
+}
+
 .avatar {
     position: absolute;
     top: 0;
     right: 0;
+
+}
+.meny-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-right: 100px;
 }

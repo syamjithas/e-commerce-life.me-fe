@@ -11,5 +11,5 @@ export const routes: Routes = [
             { path: 'listing', component: ListingComponent }
         ]
     },
-    { path: 'auth/login', component: LoginComponent },
+    { path: 'user/login', component: LoginComponent },
 ];
