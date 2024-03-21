@@ -20,6 +20,7 @@
     right: 0;
 
 }
+
 .meny-bar {
     display: flex;
     justify-content: space-around;
@@ -27,4 +28,31 @@
     flex-direction: row;
     flex-wrap: nowrap;
     margin-right: 100px;
+}
+
+.get_started {
+    background: linear-gradient(90deg, #65C2ED 0%, #F1ADFF 100%);
+    border-radius: 6px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    border: 1.33333px solid #FFFFFF;
+}
+
+.input-search {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 0.4px solid #A1A1A1;
+    border-radius: 6px;
+    border: 1.5px solid #494949;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #4E4C56;
+    opacity: 0.6;
 }
