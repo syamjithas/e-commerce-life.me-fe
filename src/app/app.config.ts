@@ -1,5 +1,6 @@
 import { ApplicationConfig, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { provideRouter } from '@angular/router';
+import { environment } from './environments/environment';
 import {
   GoogleLoginProvider,
   SocialAuthServiceConfig,
@@ -18,7 +19,7 @@ export const appConfig: ApplicationConfig = {
           {
             id: GoogleLoginProvider.PROVIDER_ID,
             provider: new GoogleLoginProvider(
-              '562634455383-dp57pa6ktlbbdfrae0smik108nerqflb.apps.googleusercontent.com'
+              environment.google_client_id
             ),
           },
         ],

@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = `${environment.base_url}/${environment.version}`;
+  private baseUrl = `${environment.base_url}`;
 
   constructor(
     private router: Router,
@@ -43,19 +43,12 @@ export class AuthService {
     return !!this.localStorage.get('authorization');
   }
 
-  isAdmin(): boolean {
-    // Assuming admin status is determined by a specific flag in the stored user object
-    const user = this.localStorage.getJSON('user');
-    return user && user.isAdmin;
-  }
-
   refreshToken(): void {
-    const url = `${this.baseUrl}/refresh-token`; // Assuming '/refresh-token' is the endpoint for token refresh
+    const url = `${this.baseUrl}/refresh-token`; 
     this.http.get(url).pipe(
       catchError(this.handleError)
     ).subscribe({
       next: (response: any) => {
-        // Assuming the response includes a new token
         this.registerAuthToken(response.newToken);
       },
       error: (error) => {
@@ -65,13 +58,10 @@ export class AuthService {
   }
 
   private handleError(error: HttpErrorResponse) {
-    // Customize error handling based on your project's needs
     let errorMessage = 'An unknown error occurred!';
     if (error.error instanceof ErrorEvent) {
-      // Client-side or network error
       errorMessage = `An error occurred: ${error.error.message}`;
     } else {
-      // The backend returned an unsuccessful response code
       errorMessage = `Server returned code: ${error.status}, error message is: ${error.message}`;
     }
     console.error(errorMessage);

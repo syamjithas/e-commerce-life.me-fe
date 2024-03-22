@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class HttpService {
-  private baseUrl = `${environment.base_url}/${environment.version}`;
+  private baseUrl = `${environment.base_url}`;
 
   constructor(
     private http: HttpClient,
@@ -44,7 +44,6 @@ export class HttpService {
 
   private handleError = (error: HttpErrorResponse) => {
     if (error.status === 401) {
-      // Assuming '/login' is your login route
       this.router.navigate(['/login']);
     } else {
       console.error('An unexpected error occurred:', error.error);
